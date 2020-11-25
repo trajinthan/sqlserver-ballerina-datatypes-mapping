@@ -10,13 +10,12 @@ public function main() {
         error? e;
 
         //create tables with different data type categories
-        e=createTables(jdbcClient);
+        createTables(jdbcClient);
 
-        e = closeClient(jdbcClient);
 
-        if(e is error){
-            io:println(e);
-        }
+        // if(e is error){
+        //     io:println(e);
+        // }
     }
 
     else{
