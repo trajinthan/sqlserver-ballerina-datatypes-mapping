@@ -1,0 +1,9 @@
+org_name = "rajinthan"
+version = "0.1.0"
+lockfile_version = "1.0.0"
+ballerina_version = "slp5"
+
+[[imports."rajinthan/datatypes:0.1.0"]]
+org_name = "ballerina"
+name = "io"
+version = "0.5.1"
