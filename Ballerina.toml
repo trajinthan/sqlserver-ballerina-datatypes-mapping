@@ -2,7 +2,12 @@
 org-name= "rajinthan"
 version= "0.1.0"
 
-[build-options]
-observability-included=true
+[platform]
+target = "java11"
+
+    [[platform.libraries]]
+    artifactId = "mssql-jdbc-8.4.1.jre11"
+   
+    path = "C:/Program Files/sqljdbc_8.4/enu/mssql-jdbc-8.4.1.jre11.jar"
 
 [dependencies]
