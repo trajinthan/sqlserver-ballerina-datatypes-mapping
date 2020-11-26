@@ -3,14 +3,14 @@ import ballerina/sql;
 import ballerina/java.jdbc;
 
 function createTableExactNumeric(jdbc:Client jdbcClient)returns sql:Error?{
-    sql:ExecutionResult result = check jdbcClient->execute("CREATE TABLE ExactNmeric(" +
+    sql:ExecutionResult result = check jdbcClient->execute("CREATE TABLE ExactNumeric(" +
         "BigInt_col  bigint, " +
         "Numeric_col  numeric(10,5), " +
         "Bit_col  bit,  "+
         "SmallInt_col smallint, "+
         "Decimal_col decimal(5,2),"+
         "SmallMoney_col smallmoney,"+
-        "Int_col int,"+
+        "Int_col inT,"+
         "TinyInt_col tinyint,"+
         "Money_col money,"+
         ")"
@@ -29,7 +29,7 @@ function createTableDateandTime(jdbc:Client jdbcClient)returns sql:Error?{
     sql:ExecutionResult result = check jdbcClient->execute("CREATE TABLE DateandTime(" +
         "Date_col  date, " +
         "DateTimeOffset_col  datetimeoffset, " +
-        "datetime2_col datetime2, "+
+        "DateTime2_col datetime2, "+
         "SmallDateTime_col smalldatetime,"+
         "DateTime_col datetime,"+
         "Time_col time,"+
@@ -38,7 +38,7 @@ function createTableDateandTime(jdbc:Client jdbcClient)returns sql:Error?{
 }
 
 function createTableString(jdbc:Client jdbcClient)returns sql:Error?{
-    sql:ExecutionResult result = check jdbcClient->execute("CREATE TABLE String(" +
+    sql:ExecutionResult result = check jdbcClient->execute("CREATE TABLE CharacterString(" +
         "Char_col char(255) , " +
         "Varchar_col  varchar(255), " +
         "Text_col text,"+
@@ -69,15 +69,10 @@ function createTables(jdbc:Client jdbcClient){
     sql:Error? err;
 
     err=createTableExactNumeric(jdbcClient);
-    
     err=createTableApproximateNumeric(jdbcClient);
-
     err=createTableDateandTime(jdbcClient);
-
     err=createTableString(jdbcClient);
-
     err=createTableUnicodeString(jdbcClient);
-
     err=createTableBinaryString(jdbcClient);
 
 }

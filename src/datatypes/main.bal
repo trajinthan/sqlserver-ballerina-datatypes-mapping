@@ -10,12 +10,17 @@ public function main() {
         error? e;
 
         //create tables with different data type categories
-        createTables(jdbcClient);
+        //e=createTables(jdbcClient);
 
+        //insert data for all datatypes
+        e=insertData(jdbcClient);
 
-        // if(e is error){
-        //     io:println(e);
-        // }
+        //select data from all tables
+        //e=selectData(jdbcClient)
+
+        if(e is error){
+            io:println(e);
+        }
     }
 
     else{
