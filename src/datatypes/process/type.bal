@@ -1,11 +1,11 @@
 type ExactNumeric record {|
     int BigInt_col;
-    boolean Bit_col;
-    string SmallInt_col;
-    decimal Decimal_col;
+    int Bit_col;
+    int SmallInt_col;
+    int Decimal_col;
     int Smallmoney_col;
-    string Int_col;
-    string Tinyint_col;
+    int Int_col;
+    int Tinyint_col;
     int Money_col;
     int Numeric_col;
    
@@ -17,7 +17,7 @@ type ApproximateNumeric record {|
    
 |};
 
-type DateAndTime record {|
+type DateandTime record {|
     int Date_col;
     string DateTimeOffset_col;
     int DateTime2_col;

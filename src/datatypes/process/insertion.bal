@@ -125,7 +125,7 @@ function insertData(jdbc:Client jdbcClient){
     err=insertExactNumeric(jdbcClient);
     err=insertApproximateNumeric(jdbcClient);
     err=insertDateAndTime(jdbcClient);
-    err=insertString(jdbcClient)
+    err=insertString(jdbcClient);
     err=insertUnicodeString(jdbcClient);
     err=insertBinaryString(jdbcClient);
 }

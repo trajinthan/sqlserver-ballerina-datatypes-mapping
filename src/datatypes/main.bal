@@ -13,10 +13,10 @@ public function main() {
         //e=createTables(jdbcClient);
 
         //insert data for all datatypes
-        e=insertData(jdbcClient);
+        //e=insertData(jdbcClient);
 
         //select data from all tables
-        //e=selectData(jdbcClient)
+        e=selectData(jdbcClient);
 
         if(e is error){
             io:println(e);
