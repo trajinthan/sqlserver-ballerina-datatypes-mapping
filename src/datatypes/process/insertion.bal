@@ -45,14 +45,14 @@ function insertApproximateNumeric(jdbc:Client jdbcClient) returns sql:Error? {
 
 function insertDateAndTime(jdbc:Client jdbcClient) returns sql:Error?{
     sql:DateValue date = new ("2017-06-26");
-    sql:TimestampValue date_time_offset=new ("2020-01-01 19:14:51 +05:30");
+    sql:TimestampValue date_time_offset=new ("2020-01-01 19:14:51");
     sql:TimestampValue date_time2= 	new("1900-01-01 00:25:00.0021425");
     sql:TimestampValue small_date_time=new("2007-05-10 10:00:20");
     sql:TimestampValue date_time =new("2017-06-26 09:54:21.325");
     sql:TimeValue time= new("09:46:22");
 
     sql:ParameterizedQuery insertQuery =
-            `INSERT INTO DateAndTime (Date_col,DateTimeOffset_col,DateTime2_col,SmallDateTime_col,DateTime_col,Time_col) VALUES
+            `INSERT INTO DateandTime (Date_col,DateTimeOffset_col,DateTime2_col,SmallDateTime_col,DateTime_col,Time_col) VALUES
              (${date},${date_time_offset},${date_time2},${small_date_time},${date_time},${time}
             )`;
     

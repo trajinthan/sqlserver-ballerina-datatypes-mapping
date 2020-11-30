@@ -12,7 +12,7 @@ type ExactNumeric record {|
 |};
 
 type ApproximateNumeric record {|
-    decimal Float_col;
+    float Float_col;
     float Real_col;
    
 |};

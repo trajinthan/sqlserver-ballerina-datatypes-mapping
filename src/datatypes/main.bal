@@ -7,19 +7,19 @@ public function main() {
     sql:Error| jdbc:Client jdbcClient = initializeClient();
 
     if(jdbcClient is jdbc:Client){  
-        error? e;
+        error? err;
 
         //create tables with different data type categories
-        //e=createTables(jdbcClient);
+        //err=createTables(jdbcClient);
 
         //insert data for all datatypes
-        //e=insertData(jdbcClient);
+        //err=insertData(jdbcClient);
 
-        //select data from all tables
-        e=selectData(jdbcClient);
+        // select data from all tables
+        err=selectData(jdbcClient);
 
-        if(e is error){
-            io:println(e);
+        if(err is error){
+            io:println(err);
         }
     }
 
