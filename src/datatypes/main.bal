@@ -16,7 +16,6 @@ public function main() {
 
         // select data from all tables
         // err = selectData(jdbcClient);
-
         if (err is error) {
             io:println(err);
         }
