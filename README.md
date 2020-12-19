@@ -1,2 +1,2 @@
-# sqlserver-ballerina-datatypes-mapping
+# sqlserver_ballerina_datatypes_mapping
  
